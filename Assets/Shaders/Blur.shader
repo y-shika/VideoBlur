@@ -4,7 +4,8 @@ Shader "Custom/Blur"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Spread ("Standard Deviation (Spread)", Float) = 0
-        _GridSize ("Grid Size", Integer) = 1
+        // 960 is the maximum size of a texture, so change this if you want to blur a bigger texture
+        _GridSize ("Grid Size", Range(1, 960)) = 1 
     }
     SubShader
     {
